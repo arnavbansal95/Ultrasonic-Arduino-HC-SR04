@@ -16,7 +16,7 @@
 		* ECHO connection of the sensor (User Defined)
 	
 	Created by Arnav Bansal. Last Edited: 07 December, 2017.
-	Github: 
+	Github: https://github.com/arnavbansal95/Ultrasonic-Arduino-HC-SR04
 	
 */
 
