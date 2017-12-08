@@ -15,7 +15,7 @@
 		* TRIG connection of the sensor (User Defined)
 		* ECHO connection of the sensor (User Defined)
 	
-	Created by Arnav Bansal. Last Edited: 07 December, 2017.
+	Created by Arnav Bansal. Last Edited: 08 December, 2017.
 	Github: https://github.com/arnavbansal95/Ultrasonic-Arduino-HC-SR04
 	
 */
