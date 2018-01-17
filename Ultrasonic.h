@@ -15,7 +15,7 @@
 		* TRIG connection of the sensor (User Defined)
 		* ECHO connection of the sensor (User Defined)
 	
-	Created by Arnav Bansal. Last Edited: 08 December, 2017.
+	Created by Arnav Bansal. Last Edited: 10 January, 2018.
 	Github: https://github.com/arnavbansal95/Ultrasonic-Arduino-HC-SR04
 	
 */
@@ -42,6 +42,7 @@ class Ultrasonic
   private:
     int trig_pin;
     int echo_pin;
+	long Time_out;
     long duration, raw_dist;
 };
 

@@ -15,7 +15,7 @@
 		* TRIG connection of the sensor (User Defined)
 		* ECHO connection of the sensor (User Defined)
 	
-	Created by Arnav Bansal. Last Edited: 08 December, 2017.
+	Created by Arnav Bansal. Last Edited: 10 January, 2018.
 	Github: https://github.com/arnavbansal95/Ultrasonic-Arduino-HC-SR04
 	
 */
@@ -36,7 +36,8 @@ Ultrasonic::Ultrasonic(int trig, int echo)
    pinMode(trig,OUTPUT);
    pinMode(echo,INPUT);
    trig_pin=trig;
-   echo_pin=echo; 
+   echo_pin=echo;
+   Time_out=24000;  // 24000 µs = 400cm -> Max Range of HCSR04
 }
 
 long Ultrasonic::getRawData()
@@ -47,7 +48,11 @@ long Ultrasonic::getRawData()
 	delayMicroseconds(10);
 	digitalWrite(trig_pin, LOW);
 	pinMode(echo_pin, INPUT);
-	duration = pulseIn(echo_pin, HIGH);
+	duration = pulseIn(echo_pin, HIGH, Time_out);
+	if ( duration == 0 ) 
+	{
+		duration = Time_out; 
+	}
 	raw_dist = duration / 29 / 2;
 	return raw_dist;
 }
